@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:jee="http://www.springframework.org/schema/jee"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.0.xsd
+http://www.springframework.org/schema/jee
+http://www.springframework.org/schema/jee/spring-jee-4.0.xsd
+http://www.springframework.org/schema/mvc
+http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+    <context:annotation-config />
+
+    <!-- packages pour les controllers -->
+    <context:component-scan base-package="com.paristravel.controller" />
+
+    <!-- support JSR303 annotation if JSR 303 validation present on classpath -->
+    <mvc:annotation-driven />
+
+    <!-- Ajout des fichiers de ressources, préférable de mettre une restriction sur la localisation -->
+    <!-- mapping : pattern de l'url -->
+    <!-- location : localisation dans l'arboresence -->
+    <mvc:resources mapping="/**" location="/" />
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/view/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+    <!-- Autre façon de décrire un EJB dans un controleur Spring -->
+    <!-- <jee:local-slsb id="userDAO"
+        jndi-name="java:app/monsite/UserDAO"
+        business-interface="dao.IUserDAO" />
+    -->
+
+</beans>

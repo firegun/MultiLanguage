@@ -1,0 +1,28 @@
+.content{
+    clear: both;
+    margin-top: 100px;
+    overflow: auto;
+    height: 500px;
+}
+
+.menu {
+    float: right;
+}
+
+/* Boutton Google+ */
+#signinButtonGPlus  {
+    display: none;
+}
+
+.disable {
+    display: none;
+}
+
+.thumbnail-twitter{
+    height: 150px;
+}
+
+
+.twitter-txt{
+    color: #222;
+}
