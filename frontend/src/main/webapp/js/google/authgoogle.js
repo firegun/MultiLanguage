@@ -22,5 +22,5 @@ var signinCallback = function (authResult) {
 
 // Callback pour les informations de l'utilisateur Google+
 var userinfoCallback = function (userinfo){
-    //console.log(userinfo);
+//    console.log(userinfo);
 };

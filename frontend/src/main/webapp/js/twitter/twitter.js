@@ -1,13 +1,14 @@
-var signinTwitter = function(event){
-    console.log("signin twitter");
+define(
+['jquery'],
+function($){
 
-    $.ajax({
-        type: "POST",
-        url: "http://127.0.0.1:8080/frontend/rest/twitter/oauth"
-    }).done(function(response) {
-        console.log(response);
-        window.location.replace(response);
-    });
-
-
-};
+    var signinTwitter = function(event){
+        $.ajax({
+            type: "POST",
+            url: "http://127.0.0.1:8080/frontend/rest/twitter/oauth"
+        }).done(function(response) {
+            window.location.replace(response);
+        });
+    };
+    return signinTwitter;
+});
