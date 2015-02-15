@@ -56,7 +56,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
-        ParisTravel
+        MultiLanguage
     </div>
 </nav>
 
